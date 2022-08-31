@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import {
   Button, Container, Header, Aside, Main, Menu, Submenu, MenuItem, MenuItemGroup, Dropdown,
-  DropdownMenu, DropdownItem, Row, Col, Card, Table, TableColumn
+  DropdownMenu, DropdownItem, Row, Col, Card, Table, TableColumn, Breadcrumb, BreadcrumbItem
 } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/less/index.less'
@@ -31,6 +31,8 @@ Vue.use(Col)
 Vue.use(Card)
 Vue.use(Table)
 Vue.use(TableColumn)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
 Vue.prototype.$http = http
 
 new Vue({

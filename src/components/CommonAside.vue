@@ -2,20 +2,23 @@
     <el-menu default-active="1-4-1" class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff"
         active-text-color="#ffd04b" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
 
-        <h3>{{  isCollapse ? '后台' : '光电所管理系统'  }}</h3>
-
+        <h3>{{ isCollapse ? '后台' : '光电所管理系统' }}</h3>
+        <!-- 无子选项的标签 -->
         <el-menu-item @click="clickMenu(item)" v-for="item in noChildren" :index="item.path" :key="item.path">
             <i :class="'el-icon-' + item.icon"></i>
-            <span slot="title">{{  item.label  }}</span>
+            <span slot="title">{{ item.label }}</span>
         </el-menu-item>
 
+        <!-- 有子选项的菜单 -->
         <el-submenu v-for="item in hasChildren" :index="item.path" :key="item.path">
             <template slot="title">
                 <i :class="'el-icon-' + item.icon"></i>
-                <span slot="title">{{  item.label  }}</span>
+                <span slot="title">{{ item.label }}</span>
             </template>
             <el-menu-item-group v-for="(subItem, subIndex) in item.children" :key="subItem.path">
-                <el-menu-item :index="subIndex">{{  subItem.label  }}</el-menu-item>
+                <el-menu-item @click="clickMenu(subItem)" :index="subIndex.toString()">
+                    {{ subItem.label }}
+                </el-menu-item>
             </el-menu-item-group>
         </el-submenu>
     </el-menu>
@@ -52,18 +55,18 @@ export default {
                     url: 'Home/Home'
                 },
                 {
-                    path: '/compounds',
-                    name: 'compounds',
-                    label: '药品管理',
-                    icon: 'box',
-                    url: 'CompoundsManage/CompoundsManage'
+                    path: '/mall',
+                    name: 'mall',
+                    label: '商品管理',
+                    icon: 'video-play',
+                    url: 'MallManage/MallManage'
                 },
                 {
                     path: '/user',
-                    name: 'User',
+                    name: 'user',
                     label: '用户管理',
                     icon: 'user',
-                    url: 'UserManage/Usermanage'
+                    url: 'UserManage/UserManage'
                 },
                 {
                     label: '其他',
@@ -84,7 +87,7 @@ export default {
                             url: 'Other/PageTwo'
                         }
                     ]
-                },
+                }
             ]
         };
     },
@@ -101,6 +104,7 @@ export default {
             this.$router.push({
                 name: item.name
             })
+            this.$store.commit('selectMenu', item)
         }
     },
     computed: {
