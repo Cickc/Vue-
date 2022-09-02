@@ -3,7 +3,7 @@ import App from './App.vue'
 import {
   Button, Container, Header, Aside, Main, Menu, Submenu, MenuItem, MenuItemGroup, Dropdown,
   DropdownMenu, DropdownItem, Row, Col, Card, Table, TableColumn, Breadcrumb, BreadcrumbItem,
-  Tag, Form, FormItem, Input, Select, Switch, DatePicker, Option, Dialog
+  Tag, Form, FormItem, Input, Select, Switch, DatePicker, Option, Dialog, Pagination, MessageBox, Message
 } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/less/index.less'
@@ -43,8 +43,11 @@ Vue.use(Select)
 Vue.use(Switch)
 Vue.use(DatePicker)
 Vue.use(Option)
+Vue.use(Pagination)
 
 Vue.prototype.$http = http
+Vue.prototype.$confirm = MessageBox.confirm
+Vue.prototype.$message = Message
 
 new Vue({
   store,
