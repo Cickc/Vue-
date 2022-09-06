@@ -30,11 +30,11 @@ yarn lint
 
 ##### Login with username: admin and password: admin
 
-![Screenshot - 2022-09-06 16.02.54](C:\Users\34090\Pictures\Dell.library\images\L7PWMIECWVR74.info/Screenshot - 2022-09-06 16.02.54.png)
+![image](https://github.com/Cickc/Vue-Backstage-management/blob/master/Admin.png?raw=true)
 
 #### Visitor interface:
 
 ##### Login with username: visitor and password: visitor
 
-![Screenshot - 2022-09-06 16.03.50](C:\Users\34090\Pictures\Dell.library\images\L7PWNPSAGC617.info/Screenshot - 2022-09-06 16.03.50.png)
+![image](https://github.com/Cickc/Vue-Backstage-management/blob/master/Visitor.png?raw=true)
 
