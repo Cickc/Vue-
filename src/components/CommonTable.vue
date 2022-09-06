@@ -20,7 +20,7 @@
 
             </el-table-column>
         </el-table>
-
+        <!-- 分页 -->
         <el-pagination class="pager" layout="prev, pager, next " :total="config.total" :current-page.sync="localConfig.page"
             @current-change="changePage" :page-size="20">
         </el-pagination>
