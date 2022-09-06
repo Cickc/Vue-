@@ -24,7 +24,7 @@ yarn lint
 
 #### Login Menu:
 
-![Screenshot - 2022-09-06 16.02.32](C:\Users\34090\Pictures\Dell.library\images\L7PWM0VRZEI3W.info/Screenshot - 2022-09-06 16.02.32.png)
+![image](https://github.com/Cickc/Vue-Backstage-management/blob/master/Login.png?raw=true)
 
 #### Admin interface:
 
